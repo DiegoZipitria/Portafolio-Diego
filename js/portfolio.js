@@ -284,7 +284,7 @@ const projects = [
         title: "Proyecto Web Corporativo",
         description:
             "Sitio web moderno y profesional diseñado para mejorar la presencia digital de una empresa.",
-        link: "#"
+        link: "https://diegozipitria.github.io/Aurora.github.io/ "
     },
 
     {
@@ -293,7 +293,7 @@ const projects = [
         title: "Tienda Online",
         description:
             "Tienda online diseñada para mostrar productos y facilitar las ventas de manera sencilla y profesional.",
-        link: "#"
+        link: "https://diegozipitria.github.io/NehNehWeb/"
     }
 
 ];
