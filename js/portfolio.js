@@ -1,29 +1,3 @@
-// =========================
-// GALERÍA DE PROYECTOS
-// =========================
-
-const projects = [
-
-    {
-        image: "img/proyecto1.jpg",
-        category: "DESARROLLO WEB",
-        title: "Proyecto Web Corporativo",
-        description:
-            "Sitio web moderno y profesional diseñado para mejorar la presencia digital de una empresa.",
-        link: "#"
-    },
-
-    {
-        image: "img/proyecto2.jpg",
-        category: "E-COMMERCE",
-        title: "Tienda Online",
-        description:
-            "Tienda online diseñada para mostrar productos y facilitar las ventas de manera sencilla y profesional.",
-        link: "#"
-    }
-
-];
-
 
 // Proyecto actual
 
@@ -156,4 +130,172 @@ thumbnails.forEach((thumbnail) => {
     });
 
 });
-```
+
+
+// =========================
+// CHATBOT STUDIO PERSA
+// =========================
+
+
+// Elementos
+
+
+const chatbotButton =
+    document.getElementById("chatbot-button");
+
+const chatbotWindow =
+    document.getElementById("chatbot-window");
+
+const chatbotClose =
+    document.getElementById("chatbot-close");
+
+const chatbotMessages =
+    document.getElementById("chatbot-messages");
+
+const chatbotQuestions =
+    document.querySelectorAll(
+        "#chatbot-questions button"
+    );
+
+
+// =========================
+// RESPUESTAS
+// =========================
+
+const answers = {
+
+    precio:
+        "El precio depende del tipo de página, la cantidad de secciones y las funcionalidades que necesites. Podés contactarnos para solicitar una cotización personalizada.",
+
+    tiempo:
+        "El tiempo de desarrollo depende del proyecto. Una página web sencilla puede estar lista en pocos días, mientras que proyectos más completos pueden requerir más tiempo.",
+
+    servicios:
+        "Ofrecemos diseño y desarrollo de páginas web corporativas, landing pages, portfolios, tiendas online y soluciones web personalizadas.",
+
+    responsive:
+        "Sí. Todas nuestras páginas se diseñan para adaptarse a computadoras, tablets y celulares.",
+
+    dominio:
+        "Podemos ayudarte con la configuración del dominio y el hosting. La contratación de estos servicios puede variar según las necesidades del proyecto.",
+
+    mantenimiento:
+        "Sí. Podemos realizar modificaciones, actualizaciones y mantenimiento de tu página después de su lanzamiento.",
+
+    contacto:
+        "Podés solicitar una cotización desde la sección de Contacto de nuestra página. Contanos qué necesitás y nos pondremos en contacto contigo."
+
+};
+
+
+// =========================
+// ABRIR CHATBOT
+// =========================
+
+chatbotButton.addEventListener("click", () => {
+
+    chatbotWindow.classList.add("active");
+
+});
+
+
+// =========================
+// CERRAR CHATBOT
+// =========================
+
+chatbotClose.addEventListener("click", () => {
+
+    chatbotWindow.classList.remove("active");
+
+});
+
+
+// =========================
+// AGREGAR MENSAJE
+// =========================
+
+function addMessage(text, type) {
+
+    const message =
+        document.createElement("div");
+
+    message.classList.add(
+        type === "bot"
+            ? "bot-message"
+            : "user-message"
+    );
+
+    message.textContent = text;
+
+    chatbotMessages.appendChild(message);
+
+
+    // Bajar automáticamente
+
+    chatbotMessages.scrollTop =
+        chatbotMessages.scrollHeight;
+
+}
+
+
+// =========================
+// PREGUNTAS
+// =========================
+
+chatbotQuestions.forEach((button) => {
+
+    button.addEventListener("click", () => {
+
+        const question =
+            button.textContent.trim();
+
+        const answer =
+            answers[button.dataset.question];
+
+
+        // Mostrar pregunta del usuario
+
+        addMessage(
+            question,
+            "user"
+        );
+
+
+        // Pequeño retraso para que parezca
+        // una conversación real
+
+        setTimeout(() => {
+
+            addMessage(
+                answer,
+                "bot"
+            );
+
+        }, 400);
+
+    });
+
+});
+
+const projects = [
+    {
+        image: "img/proyecto1.PNG",
+        category: "DESARROLLO WEB",
+        title: "Proyecto Web Corporativo",
+        description:
+            "Sitio web moderno y profesional diseñado para mejorar la presencia digital de una empresa.",
+        link: "#"
+    },
+
+    {
+        image: "img/proyecto2.PNG",
+        category: "E-COMMERCE",
+        title: "Tienda Online",
+        description:
+            "Tienda online diseñada para mostrar productos y facilitar las ventas de manera sencilla y profesional.",
+        link: "#"
+    }
+
+];
+
+

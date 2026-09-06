@@ -19,7 +19,7 @@
 
       <ul class="menu">
         <li><a href="#servicios">Servicios</a></li>
-        <li><a href="#proceso">Proceso</a></li>
+        <li><a href="#preguntas">Atencion 24 hrs</a></li>
         <li><a href="#portfolio">Portafolio</a></li>
         <li><a href="#contacto">Contacto</a></li>
       </ul>
@@ -96,7 +96,7 @@
 
         <img
           id="project-image"
-          src="img/proyecto1.jpg"
+          src="img/proyecto1.PNG"
           alt="Proyecto web"
         >
 
@@ -145,7 +145,7 @@
       >
 
         <img
-          src="img/proyecto1.jpg"
+          src="img/proyecto1.PNG"
           alt="Proyecto 1"
         >
 
@@ -162,7 +162,7 @@
       >
 
         <img
-          src="img/proyecto2.jpg"
+          src="img/proyecto2.PNG"
           alt="Proyecto 2"
         >
 
@@ -181,7 +181,87 @@
 
   <footer class="footer"></footer>
 
-  <script src="js/portfolio.js"></script>
-  
-  </body>
+
+  <div id="chatbot">
+
+    <!-- Botón flotante -->
+
+    <button id="chatbot-button" aria-label="Abrir chatbot">
+        💬
+    </button>
+
+
+    <!-- Ventana -->
+
+    <div id="chatbot-window">
+
+        <!-- Header -->
+
+        <div class="chatbot-header">
+            <div>
+                <strong>Studio Persa</strong>
+                <span>Asistente virtual</span>
+            </div>
+
+            <button id="chatbot-close">
+                ×
+            </button>
+
+        </div>
+
+
+        <!-- Mensajes -->
+
+        <div id="chatbot-messages">
+
+            <div class="bot-message">
+                ¡Hola! 👋<br>
+                Soy el asistente de Studio Persa.
+                ¿En qué podemos ayudarte?
+            </div>
+
+        </div>
+
+
+        <!-- Preguntas frecuentes -->
+
+        <div id="chatbot-questions">
+
+            <button data-question="precio">
+                💰 ¿Cuánto cuesta una página web?
+            </button>
+
+            <button data-question="tiempo">
+                ⏱️ ¿Cuánto demora hacer una página?
+            </button>
+
+            <button data-question="servicios">
+                💻 ¿Qué servicios ofrecen?
+            </button>
+
+            <button data-question="responsive">
+                📱 ¿Las páginas funcionan en celulares?
+            </button>
+
+            <button data-question="dominio">
+                🌐 ¿Incluyen dominio y hosting?
+            </button>
+
+            <button data-question="mantenimiento">
+                🔧 ¿Realizan mantenimiento?
+            </button>
+
+            <button data-question="contacto">
+                📩 ¿Cómo puedo solicitar una cotización?
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="js/portfolio.js"></script>
+
+</body>
 </html>
