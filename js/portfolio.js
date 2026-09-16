@@ -1,4 +1,3 @@
-
 // Proyecto actual
 
 let currentProject = 0;
@@ -63,7 +62,6 @@ function showProject(index) {
 
 
     // Actualizar miniaturas
-
     thumbnails.forEach((thumbnail, i) => {
 
         thumbnail.classList.toggle(
@@ -168,7 +166,7 @@ const answers = {
         "El precio depende del tipo de página, la cantidad de secciones y las funcionalidades que necesites. Podés contactarnos para solicitar una cotización personalizada.",
 
     tiempo:
-        "El tiempo de desarrollo depende del proyecto. Una página web sencilla puede estar lista en pocos días, mientras que proyectos más completos pueden requerir más tiempo.",
+        "El tiempo de desarrollo depende del proyecto. Una página web sencilla o informativa puede estar lista en días, mientras que proyectos más completos pueden requerir más tiempo.",
 
     servicios:
         "Ofrecemos diseño y desarrollo de páginas web corporativas, landing pages, portfolios, tiendas online y soluciones web personalizadas.",
@@ -177,7 +175,7 @@ const answers = {
         "Sí. Todas nuestras páginas se diseñan para adaptarse a computadoras, tablets y celulares.",
 
     dominio:
-        "Podemos ayudarte con la configuración del dominio y el hosting. La contratación de estos servicios puede variar según las necesidades del proyecto.",
+        "Nosotros ofrecemos el servicio de compra y configuracion de dominio en nuestro producto te ofrecemos una lista de dominios disponibles y seleccionas el que desees para tu negocio, tambien podemos adaptar el servicio a un dominio ya comprado. La contratación de estos servicios puede variar según las necesidades del proyecto.",
 
     mantenimiento:
         "Sí. Podemos realizar modificaciones, actualizaciones y mantenimiento de tu página después de su lanzamiento.",
@@ -278,6 +276,7 @@ chatbotQuestions.forEach((button) => {
 });
 
 const projects = [
+    
     {
         image: "img/proyecto1.PNG",
         category: "DESARROLLO WEB",
@@ -293,7 +292,7 @@ const projects = [
         title: "Tienda Online",
         description:
             "Tienda online diseñada para mostrar productos y facilitar las ventas de manera sencilla y profesional.",
-        link: "https://diegozipitria.github.io/NehNehWeb/"
+        link: "https://nehlulu.com/"
     }
 
 ];
